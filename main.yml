@@ -1,0 +1,48 @@
+name:CI
+on:
+  push:
+    branches:[master]
+  pull_request:
+    branches: [ master ]
+     
+
+jobs:
+    build:
+    name: Sign-in test
+    runs-on: ubuntu-18.04
+    steps:
+    - name: Check out Git repository
+      uses: actions/checkout@v2
+      
+    - name: Set up Node.js
+      uses: actions/setup-node@v1
+        with:
+          node-version: 12 
+          
+    - name: Angular git hub actions
+      uses: actions/angular-github-actions
+
+    - name: NPM install 
+      run:  npm install
+           
+    - name: Run the config.js
+      run:  protractor -- --protractor-config=./e2e/protractor-ci.conf.js 
+       
+
+Not required
+
+   - name: check the protractor version
+      run:  protractor --version
+      
+    - name: Update the webdriver-manager
+      run:  webdriver-manager update
+      
+    - name: Start the selenium server
+      run:  webdriver-managaer start       
+          
+          
+
+
+
+
+     

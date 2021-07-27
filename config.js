@@ -5,14 +5,15 @@
 exports.config = {
 
 	framework: 'jasmine',
-	seleniumAddress: 'http://localhost:4444/wd/hub',
+	directConnect: true,
+	// seleniumAddress: 'http://localhost:4444/wd/hub',
 	specs: ['Spec.js'],
 
-	/* This is to run the test on firefox browser
+	//This is to run the test on firefox browser
 	capabilities: {
 		browserName: 'firefox',
 		marionette : true,
-	}, */
+	}, 
 
 
 	/* To run the tests on multiple browsers
@@ -21,7 +22,7 @@ exports.config = {
 		{ 'browserName': 'firefox' },
 	],*/
 
-	// To run the tests on headless chrome
+	/*To run the tests on headless chrome
 	capabilities: {
 		browserName: 'chrome',
 
@@ -29,7 +30,7 @@ exports.config = {
 			args: ["--headless", "--disable-gpu", "--window-size=800,600"]
 		}
 	},
-	
+	*/
 	/*To run the tests on headless firefox
 	capabilities: {
 		browserName: 'firefox',
@@ -44,4 +45,39 @@ exports.config = {
 		showColors: true,
 		defaultTimeoutInterval: 30000
 	},
+
+	onPrepare: function () {
+		var jasmineReporters = require('jasmine-reporters');
+		jasmine.getEnv().addReporter(new jasmineReporters.JUnitXmlReporter({
+			consolidateAll: true,
+			savePath: './',
+			filePrefix: 'xmlresults'
+		}));
+	},
+
+	onComplete: function () {
+		var browserName, browserVersion;
+		var capsPromise = browser.getCapabilities();
+
+		capsPromise.then(function (caps) {
+			browserName = caps.get('browserName');
+			browserVersion = caps.get('version');
+			platform = caps.get('platform');
+
+			var HTMLReport = require('protractor-html-reporter-2');
+
+			testConfig = {
+				reportTitle: 'Protractor Test Execution Report',
+				outputPath: './',
+				outputFilename: 'ProtractorTestReport',
+				screenshotPath: './screenshots',
+				testBrowser: browserName,
+				browserVersion: browserVersion,
+				modifiedSuiteName: false,
+				screenshotsOnlyOnFailure: true,
+				testPlatform: platform
+			};
+			new HTMLReport().from('xmlresults.xml', testConfig);
+		});
+	}
 };

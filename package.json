@@ -1,17 +1,22 @@
 {
   "name": "signin",
   "version": "1.0.0",
-  "description": "",
+  "description": "Signin",
   "main": "Spec.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "protractor config.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/NoviceCoder17/Signin.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "test",
+    "signin",
+    "package",
+    "angular"
+  ],
+  "author": "Prema Shivarama",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/NoviceCoder17/Signin/issues"

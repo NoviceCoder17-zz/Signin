@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites disabled="0" errors="0" failures="0" tests="3" time="42.712">
+ <testsuite name="Signin Functionality" timestamp="2021-07-27T11:55:18" hostname="localhost" time="42.712" errors="0" tests="3" skipped="0" disabled="0" failures="0">
+  <testcase classname="Signin Functionality" name="Login with valid password and wrong email ID" time="19.003" />
+  <testcase classname="Signin Functionality" name="Login with email ID and invalid password" time="12.001" />
+  <testcase classname="Signin Functionality" name="Login with valid password and email" time="11.706" />
+ </testsuite>
+</testsuites>
