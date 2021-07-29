@@ -1,7 +1,5 @@
  //Automation test case 2
 //AA-TC-16 Candidate sign -in
-// Functional as of 24/June/2021
-// Updated other capabilities to run in headless mode
 
 describe("Signin Functionality", function () {
 	it("Login with valid password and wrong email ID", function () {

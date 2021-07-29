@@ -1,11 +1,10 @@
- //Automation test case 2
+//Automation test case 2
 //AA-TC-16 Candidate sign -in
-// Functional as of 24/June/2021
-// Updated other capabilities to run in headless mode
+
 exports.config = {
 
 	framework: 'jasmine',
-	directConnect: true,
+	directConnect: true, // Runs directly without the selenium server
 	// seleniumAddress: 'http://localhost:4444/wd/hub',
 	specs: ['Spec.js'],
 
@@ -45,7 +44,7 @@ exports.config = {
 		showColors: true,
 		defaultTimeoutInterval: 30000
 	},
-
+	// Generate xml report
 	onPrepare: function () {
 		var jasmineReporters = require('jasmine-reporters');
 		jasmine.getEnv().addReporter(new jasmineReporters.JUnitXmlReporter({
@@ -55,6 +54,7 @@ exports.config = {
 		}));
 	},
 
+	// Generate a report (.html from xml)
 	onComplete: function () {
 		var browserName, browserVersion;
 		var capsPromise = browser.getCapabilities();
@@ -65,7 +65,6 @@ exports.config = {
 			platform = caps.get('platform');
 
 			var HTMLReport = require('protractor-html-reporter-2');
-
 			testConfig = {
 				reportTitle: 'Protractor Test Execution Report',
 				outputPath: './',
