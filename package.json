@@ -7,31 +7,36 @@
   "scripts": {
     "test": "protractor config.js"
   },
+	
   "repository": {
     "type": "git",
     "url": "git+https://github.com/NoviceCoder17/Signin.git"
   },
   
   "dependencies": {
-	"@types/jasmine": "^2.8.8",
+     "@types/jasmine": "^2.8.8",
     "jasmine": "^3.8.0",
     "protractor": "^5.4.1",
     "typescript": "^3.0.3"
-    "mkdirp": "~0.3.5",
     "q": "1.0.0",
     "firefox-profile": "0.3.4"
-    "babel-cli": "^6.26.0",
     "chromedriver": "^92.0.0",
     "jasmine-node": "^3.0.0",
     "protractor": "^7.0.0",
-    "protractor-html-reporter-2": "^1.0.4"
+    "protractor-html-reporter-2": "^1.0.4",
+	  "webdriver-manager": "^12.1.8"
   },
   
   "devDependencies": {
     "jasmine-reporters": "^2.4.0",
     "protractor-helper": "^4.2.1"
   },
-  
+	
+   "bin": {
+    "protractor": "bin/protractor",
+    "webdriver-manager": "bin/webdriver-manager"
+   },
+	
   "keywords": [
     "test",
     "signin",
