@@ -10,35 +10,36 @@ jobs:
     build:
     name: Sign-in test
     runs-on: ubuntu-18.04
-    steps:
-    - name: Check out Git repository
-      uses: actions/checkout@v2
-      
-    - name: Set up Node.js
+    steps:       
+        uses: actions/checkout@v2
+      - name: Use Node.js ${{ env.NODE_VERSION }}
       uses: actions/setup-node@v1
-        with:
-          node-version: 12 
+      with:
+        node-version: ${{ env.NODE_VERSION }}
           
     - name: Angular git hub actions
       uses: actions/angular-github-actions
 
-    - name: NPM install 
+    - name: NPM install dependencies
       run:  npm install
+      
+     - name: Update the webdriver-manager
+      run:  npm run webdriver-manager update
            
     - name: Run the config.js
-      run:  protractor -- --protractor-config=./e2e/protractor-ci.conf.js 
+      run:  npm run test
        
 
-Not required
+#Not required
 
-   - name: check the protractor version
-      run:  protractor --version
+  # - name: check the protractor version
+  #    run:  protractor --version
       
-    - name: Update the webdriver-manager
-      run:  webdriver-manager update
+   # - name: Update the webdriver-manager
+    #  run:  webdriver-manager update
       
-    - name: Start the selenium server
-      run:  webdriver-managaer start       
+    #- name: Start the selenium server
+    #  run:  webdriver-managaer start       
           
           
 
