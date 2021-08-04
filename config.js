@@ -2,7 +2,7 @@
 //AA-TC-16 Candidate sign -in
 
 exports.config = {
-	var jasmineReporters = require('jasmine-reporters'); // CHECK this
+	
 	framework: 'jasmine',
 	directConnect: true, // Runs directly without the selenium server
 	// seleniumAddress: 'http://localhost:4444/wd/hub',
