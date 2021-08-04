@@ -7,7 +7,7 @@
   "scripts": {
 	"postinstall": "node_modules/protractor/bin/webdriver-manager update",
     "test": "protractor config.js",
-    "update" : "webdriver-manager update",
+    "update" : "webdriver-manager update"
  
   },
 	
@@ -27,7 +27,7 @@
     "protractor": "^7.0.0",
     "protractor-html-reporter-2": "^1.0.4",
 	  "webdriver-manager": "^12.1.8",
-	  "jasmine-reporters": "^2.4.0",
+	  "jasmine-reporters": "^2.4.0"
   },
   
   "devDependencies": {   
