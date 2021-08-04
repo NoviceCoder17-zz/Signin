@@ -1,7 +1,9 @@
 //Automation test case 2
 //AA-TC-16 Candidate sign -in
 // Working as of August 4th
-
+var jasmineReporters = require('jasmine-reporters');
+var htmlReporter = require('../lib/protractor-xml2html-reporter');
+var fs = require('fs-extra');
 exports.config = {
 	
 	framework: 'jasmine',
@@ -56,7 +58,7 @@ exports.config = {
            		 console.log(err);
         	});
 		
-		var jasmineReporters = require('jasmine-reporters'); // CHECK this
+		#var jasmineReporters = require('jasmine-reporters'); // CHECK this
 		jasmine.getEnv().addReporter(new jasmineReporters.JUnitXmlReporter({
 			consolidateAll: true,
 			savePath: './reports/xml/',
@@ -74,7 +76,7 @@ exports.config = {
 			browserVersion = caps.get('version');
 			platform = caps.get('platform');
 
-			var HTMLReport = require('protractor-html-reporter-2');
+			#var HTMLReport = require('protractor-html-reporter-2');
 			testConfig = {
 				reportTitle: 'Protractor Test Execution Report',
 				outputPath: './reports/',
