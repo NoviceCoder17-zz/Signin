@@ -5,8 +5,8 @@
   "description": "Signin",
   "main": "Spec.js",
   "scripts": {
-
-    #"webdriver-manager-update": "webdriver-manager update",
+	"postinstall": "node_modules/protractor/bin/webdriver-manager update"
+   // #"webdriver-manager-update": "webdriver-manager update",
     "test": "protractor config.js"
   },
 	
@@ -16,7 +16,7 @@
   },
   
   "dependencies": {
-     "@types/jasmine": "^2.8.8",
+    "@types/jasmine": "^2.8.8",
     "jasmine": "^3.8.0",
     "typescript": "^3.0.3",
     "q": "1.0.0",
@@ -26,10 +26,11 @@
     "protractor": "^7.0.0",
     "protractor-html-reporter-2": "^1.0.4",
 	  "webdriver-manager": "^12.1.8"
+	  "jasmine-reporters": "^2.4.0",
   },
   
   "devDependencies": {
-    "jasmine-reporters": "^2.4.0",
+    
     "protractor-helper": "^4.2.1"
   },
 	
