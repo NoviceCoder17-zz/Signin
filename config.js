@@ -49,7 +49,7 @@ exports.config = {
 		var jasmineReporters = require('jasmine-reporters'); // CHECK this
 		jasmine.getEnv().addReporter(new jasmineReporters.JUnitXmlReporter({
 			consolidateAll: true,
-			savePath: 'Signin/',
+			savePath: '../',
 			filePrefix: 'xmlresults'
 		}));
 	},
@@ -67,7 +67,7 @@ exports.config = {
 			var HTMLReport = require('protractor-html-reporter-2');
 			testConfig = {
 				reportTitle: 'Protractor Test Execution Report',
-				outputPath: './',
+				outputPath: '../',
 				outputFilename: 'ProtractorTestReport',
 				screenshotPath: './screenshots',
 				testBrowser: browserName,
