@@ -67,9 +67,9 @@ exports.config = {
 			var HTMLReport = require('protractor-html-reporter-2');
 			testConfig = {
 				reportTitle: 'Protractor Test Execution Report',
-				outputPath: './',
+				outputPath: 'https://github.com/NoviceCoder17/Signin/',
 				outputFilename: 'ProtractorTestReport',
-				screenshotPath: './screenshots',
+				screenshotPath: 'https://github.com/NoviceCoder17/Signin/screenshots',
 				testBrowser: browserName,
 				browserVersion: browserVersion,
 				modifiedSuiteName: false,
