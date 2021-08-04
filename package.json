@@ -5,48 +5,40 @@
   "description": "Signin",
   "main": "Spec.js",
   "scripts": {
-	"postinstall": "node_modules/protractor/bin/webdriver-manager update",
+    "postinstall": "node_modules/protractor/bin/webdriver-manager update",
     "test": "protractor config.js",
-    "update" : "webdriver-manager update"
- 
+    "update": "webdriver-manager update"
   },
-	
   "repository": {
     "type": "git",
     "url": "git+https://github.com/NoviceCoder17/Signin.git"
   },
-  
   "dependencies": {
     "@types/jasmine": "^2.8.8",
-    "jasmine": "^3.8.0",
-    "typescript": "^3.0.3",
-    "q": "1.0.0",
-    "firefox-profile": "0.3.4",
     "chromedriver": "^92.0.0",
+    "firefox-profile": "0.3.4",
+    "jasmine": "^3.8.0",
     "jasmine-node": "^3.0.0",
+    "jasmine-reporters": "^2.4.0",
     "protractor": "^7.0.0",
     "protractor-html-reporter-2": "^1.0.4",
-	  "webdriver-manager": "^12.1.8",
-	  "jasmine-reporters": "^2.4.0"
+    "q": "1.0.0",
+    "typescript": "^3.0.3",
+    "webdriver-manager": "^12.1.8"
   },
-  
-  "devDependencies": {   
+  "devDependencies": {
     "protractor-helper": "^4.2.1"
   },
-	
-   "bin": {
+  "bin": {
     "webdriver-manager": "bin/webdriver-manager"
-   },
-	
+  },
   "keywords": [
     "test",
     "signin",
     "package",
     "angular"
   ],
- 
   "license": "ISC",
-  
   "bugs": {
     "url": "https://github.com/NoviceCoder17/Signin/issues"
   },
