@@ -46,7 +46,7 @@ exports.config = {
 	},
 	// Generate xml report
 	onPrepare: function () {
-		var jasmineReporters = require('jasmine-reporters');
+		var jasmineReporters = require('jasmine-reporters').jasmineReporters; // CHECK this
 		jasmine.getEnv().addReporter(new jasmineReporters.JUnitXmlReporter({
 			consolidateAll: true,
 			savePath: './',
