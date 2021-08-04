@@ -5,7 +5,7 @@
   "description": "Signin",
   "main": "Spec.js",
   "scripts": {
-
+    "update" : "webdriver-manager update"
     "test": "protractor config.js"
   },
 	
