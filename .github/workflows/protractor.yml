@@ -36,6 +36,9 @@ jobs:
     - name: Check the version
       run: protractor --version
       
+    - name : Update the webdriver
+      run :  webdriver-manager update
+      
       # Runs a set of commands using the runners shell
     - name: Run the config file 
       run:  npm run test
