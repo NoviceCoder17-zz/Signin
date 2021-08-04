@@ -32,7 +32,6 @@
   },
 	
    "bin": {
-    "protractor": "bin/protractor",
     "webdriver-manager": "bin/webdriver-manager"
    },
 	
