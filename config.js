@@ -47,10 +47,19 @@ exports.config = {
 	},
 	// Generate xml report
 	onPrepare: function () {
+		
+		fs.emptyDir('./reports/xml/', function (err) {
+           		 console.log(err);
+        	});
+
+        	fs.emptyDir('./reports/screenshots/', function (err) {
+           		 console.log(err);
+        	});
+		
 		var jasmineReporters = require('jasmine-reporters'); // CHECK this
 		jasmine.getEnv().addReporter(new jasmineReporters.JUnitXmlReporter({
 			consolidateAll: true,
-			savePath: './xml/',
+			savePath: './reports/xml/',
 			filePrefix: 'xmlresults'
 		}));
 	},
@@ -68,16 +77,16 @@ exports.config = {
 			var HTMLReport = require('protractor-html-reporter-2');
 			testConfig = {
 				reportTitle: 'Protractor Test Execution Report',
-				outputPath: './xml/',
+				outputPath: './reports/',
 				outputFilename: 'ProtractorTestReport',
-				screenshotPath: '.xml/screenshots',
+				screenshotPath: './screenshots',
 				testBrowser: browserName,
 				browserVersion: browserVersion,
 				modifiedSuiteName: false,
 				screenshotsOnlyOnFailure: true,
 				testPlatform: platform
 			};
-			new HTMLReport().from('xmlresults.xml', testConfig);
+			new HTMLReport().from('./reports/xml/xmlresults.xml', testConfig);
 		});
 	}
 };
