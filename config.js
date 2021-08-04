@@ -49,7 +49,7 @@ exports.config = {
 		var jasmineReporters = require('jasmine-reporters'); // CHECK this
 		jasmine.getEnv().addReporter(new jasmineReporters.JUnitXmlReporter({
 			consolidateAll: true,
-			savePath: './',
+			savePath: '.https://github.com/NoviceCoder17/Signin/',
 			filePrefix: 'xmlresults'
 		}));
 	},
