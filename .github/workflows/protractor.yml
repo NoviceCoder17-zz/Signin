@@ -26,6 +26,8 @@ jobs:
       with:
           node-version: ${{ env.NODE_VERSION }}
           
+    - name: Angular Github Actions
+      uses: mayurrawte/github-angular-actions@latest
 
       # Runs a single command using the runners shell
     - name: NPM install dependencies
