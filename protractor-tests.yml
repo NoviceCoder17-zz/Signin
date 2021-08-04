@@ -19,12 +19,13 @@ jobs:
           
     - name: Angular git hub actions
       uses: actions/angular-github-actions
+      
+      - name: check the protractor version
+        run:  protractor --version
 
     - name: NPM install dependencies
       run:  npm install
       
-     - name: Update the webdriver-manager
-      run:  npm run webdriver-manager update
            
     - name: Run the config.js
       run:  npm run test
