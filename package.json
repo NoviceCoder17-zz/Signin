@@ -5,10 +5,10 @@
   "description": "Signin",
   "main": "Spec.js",
   "scripts": {
-	"postinstall": "node_modules/protractor/bin/webdriver-manager update"
-    "test": "protractor config.js"
+	"postinstall": "node_modules/protractor/bin/webdriver-manager update",
+    "test": "protractor config.js",
     "update" : "webdriver-manager update",
-    "test" : "protractor config.js"
+ 
   },
 	
   "repository": {
