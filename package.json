@@ -5,14 +5,10 @@
   "description": "Signin",
   "main": "Spec.js",
   "scripts": {
-<<<<<<< HEAD
 	"postinstall": "node_modules/protractor/bin/webdriver-manager update"
-   // #"webdriver-manager-update": "webdriver-manager update",
     "test": "protractor config.js"
-=======
     "update" : "webdriver-manager update",
     "test" : "protractor config.js"
->>>>>>> 1b96889fa5e162cb015e30275c7cf6934fa85030
   },
 	
   "repository": {
@@ -34,8 +30,7 @@
 	  "jasmine-reporters": "^2.4.0",
   },
   
-  "devDependencies": {
-    
+  "devDependencies": {   
     "protractor-helper": "^4.2.1"
   },
 	
