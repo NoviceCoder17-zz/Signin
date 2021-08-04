@@ -16,10 +16,9 @@
   "dependencies": {
      "@types/jasmine": "^2.8.8",
     "jasmine": "^3.8.0",
-    "protractor": "^5.4.1",
-    "typescript": "^3.0.3"
+    "typescript": "^3.0.3",
     "q": "1.0.0",
-    "firefox-profile": "0.3.4"
+    "firefox-profile": "0.3.4",
     "chromedriver": "^92.0.0",
     "jasmine-node": "^3.0.0",
     "protractor": "^7.0.0",
@@ -43,9 +42,7 @@
     "package",
     "angular"
   ],
-  
-  
-  "author": "Prema Shivarama",
+ 
   "license": "ISC",
   
   "bugs": {
