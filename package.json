@@ -5,6 +5,7 @@
   "description": "Signin",
   "main": "Spec.js",
   "scripts": {
+	"install": "node ./node_modules/protractor/bin/webdriver-manager update",
     "test": "protractor config.js"
   },
 	
