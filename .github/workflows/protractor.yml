@@ -29,11 +29,11 @@ jobs:
 
       # Runs a single command using the runners shell
     - name: NPM install dependencies
-      run: npm install
-      
+      run: npm install protractor
+    
     - name: update
-      run: webdriver-manager update
-
+      run: npm run Signin/bin/webdriver-manager update
+      
       # Runs a set of commands using the runners shell
     - name: Run the config file 
       run:  npm run test
