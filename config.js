@@ -8,11 +8,11 @@ exports.config = {
 	// seleniumAddress: 'http://localhost:4444/wd/hub',
 	specs: ['Spec.js'],
 
-	//This is to run the test on firefox browser
+	/*This is to run the test on firefox browser
 	capabilities: {
 		browserName: 'firefox',
 		marionette : true,
-	}, 
+	}, */
 
 
 	/* To run the tests on multiple browsers
@@ -30,7 +30,7 @@ exports.config = {
 		}
 	},
 	*/
-	/*To run the tests on headless firefox
+	//To run the tests on headless firefox
 	capabilities: {
 		browserName: 'firefox',
 
@@ -38,7 +38,7 @@ exports.config = {
 			args: ["--headless"]
 		}
 	},
-	*/
+
 
 	jasmineNodeOpts: {
 		showColors: true,
