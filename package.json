@@ -24,7 +24,7 @@
     "protractor-html-reporter-2": "^1.0.4",
     "q": "1.0.0",
     "typescript": "^3.0.3",
-    "webdriver-manager": "^12.1.8"
+    "webdriver-manager": "^12.1.8",
     
     "fs": "0.0.1-security",
     "fs-extra": "^1.0.0",
