@@ -1,6 +1,6 @@
 //Automation test case 2
 //AA-TC-16 Candidate sign -in
-// Working as of August 4th
+
 
 exports.config = {
 	
