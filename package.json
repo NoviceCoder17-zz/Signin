@@ -5,9 +5,9 @@
   "description": "Signin",
   "main": "Spec.js",
   "scripts": {
-    "postinstall": "node_modules/protractor/bin/webdriver-manager update",
-    "test": "protractor config.js",
-    "update": "webdriver-manager update"
+   // "postinstall": "node_modules/protractor/bin/webdriver-manager update",
+   // "test": "protractor config.js",
+   // "update": "webdriver-manager update"
   },
   "repository": {
     "type": "git",
