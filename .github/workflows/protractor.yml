@@ -25,9 +25,14 @@ jobs:
       uses: actions/setup-node@v1
       with:
           node-version: ${{ env.NODE_VERSION }}
-          
+      
+    
+      
     - name: Angular Github Actions
       uses: mayurrawte/github-angular-actions@latest
+      
+    - name: npm 
+      run: npm install
 
       # Runs a single command using the runners shell
     - name: NPM install dependencies
