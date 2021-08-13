@@ -34,7 +34,7 @@ jobs:
       with:
        framework: protractor
        tests: spec/**.spec.js
-       token: ${{ secrets.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 }}
+       token: ${{ secrets.GITHUB_TOKEN  }}
        comment-on-empty: true
        has-tests-label: true
 
