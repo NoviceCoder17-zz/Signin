@@ -47,4 +47,8 @@ jobs:
       # Runs a set of commands using the runners shell
     - name: Run the config file 
       run:  protractor config.js 
+      
+    - name: AutoCheck JavaScript tests by Testomatio
+      uses: testomatio/check-tests@1.0.2
+
          
